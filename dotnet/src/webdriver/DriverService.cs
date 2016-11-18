@@ -224,7 +224,7 @@ namespace OpenQA.Selenium
             this.driverServiceProcess.StartInfo.FileName = Path.Combine(this.driverServicePath, this.driverServiceExecutableName);
             this.driverServiceProcess.StartInfo.Arguments = this.CommandLineArguments;
             this.driverServiceProcess.StartInfo.UseShellExecute = false;
-            this.driverServiceProcess.StartInfo.CreateNoWindow = this.hideCommandPromptWindow;
+            this.driverServiceProcess.StartInfo.CreateNoWindow = true;
             this.driverServiceProcess.Start();
             bool serviceAvailable = this.WaitForServiceInitialization();
 
